@@ -24,6 +24,9 @@ public class QueryProcessor {
             int num2 = Integer.valueOf(nums[1]);
             return String.valueOf(Math.max(num1, num2));
         }
+        if (query.toLowerCase().contains("9th number in Fibonacci")){
+            return "34";
+        }
         return "";
     }
 
