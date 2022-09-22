@@ -17,7 +17,13 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("your name")) {
             return "sl-ml2";
         }
-        
+        if (query.toLowerCase().contains("which of the following numbers is the largest")){
+            String[] front = query.split(": ");
+            String[] nums = front[1].split(", ");
+            int num1 = Integer.valueOf(nums[0]);
+            int num2 = Integer.valueOf(nums[1]);
+            return String.valueOf(Math.max(num1, num2));
+        }
         return "";
     }
 

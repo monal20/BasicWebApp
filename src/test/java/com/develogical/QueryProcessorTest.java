@@ -34,4 +34,9 @@ public class QueryProcessorTest {
     public void isNotCaseSensitiveFrost() throws Exception {
         assertThat(queryProcessor.process("frost"), containsString("poet"));
     }
+
+    @Test
+    public void testLargest() throws Exception {
+        assertThat(queryProcessor.process("which of the following numbers is the largest: 1, 2"), containsString("2"));
+    }
 }
